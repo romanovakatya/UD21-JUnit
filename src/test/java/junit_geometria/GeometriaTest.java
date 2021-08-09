@@ -4,13 +4,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import JUnit.Junit09_Geometria.App;
 import JUnit.Junit09_Geometria.dto.Geometria;
 
 class GeometriaTest {
 	
+	//atributos de clase,
 	Geometria geometria;
 
+	//pruebas de clase Geometria,
+	//test area del cuadrado,
 	@Test
 	public void testAreaCuadrado() {
 		
@@ -21,6 +23,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test area del circulo,
 	@Test
 	public void testAreaCirculo() {
 		
@@ -32,6 +35,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado, delta);		
 	}
 	
+	//test area del triangulo,
 	@Test
 	public void testAreaTriangulo() {
 		geometria = new Geometria(3);
@@ -41,6 +45,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test area del rectangulo,
 	@Test
 	public void testAreaRectangulo() {
 		geometria = new Geometria(4);
@@ -50,6 +55,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test area del pentagono,
 	@Test
 	public void testAreaPentagono() {
 		
@@ -60,6 +66,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test area del rombo,
 	@Test
 	public void testAreaRombo() {
 		geometria = new Geometria(6);
@@ -69,6 +76,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test area del romboide,
 	@Test
 	public void testAreaRomboide() {
 		geometria = new Geometria(7);
@@ -78,6 +86,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test area del trapecio,
 	@Test
 	public void testAreaTrapecio() {
 		geometria = new Geometria(8);
@@ -86,6 +95,12 @@ class GeometriaTest {
 		int esperado = 4;
 		assertEquals(esperado, resultado);		
 	}
+	
+	//test de selector de figuras,
+	//compruebo solo default, porque
+	//test de otras figuras se hace en los,
+	//tests de sus areas, instanciando un objeto nuevo,
+	//de tipo indicado en cada test,
 	
 	@Test
 	public void testFigura() {
@@ -97,6 +112,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test del método getId,
 	@Test
 	public void testGetId() {
 		
@@ -107,6 +123,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 
+	//test del método setId,
 	@Test
 	public void testSetId() {
 		
@@ -118,6 +135,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test del método getNom,
 	@Test
 	public void testGetNom() {
 		
@@ -128,6 +146,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test del método setNom,
 	@Test
 	public void testSetNom() {
 		
@@ -139,6 +158,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado);		
 	}
 	
+	//test del método setArea,
 	@Test
 	public void testSetArea() {
 		geometria = new Geometria(1);
@@ -150,6 +170,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado, delta);
 	}
 	
+	//test del método getArea,
 	@Test
 	public void testGetArea() {
 		
@@ -162,6 +183,7 @@ class GeometriaTest {
 		assertEquals(esperado, resultado, delta);		
 	}
 	
+	//test del método toString,
 	@Test
 	public void testToString() {
 		
